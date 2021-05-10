@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Base</title>
+	<link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></head>
+<body>
+<style>
+th{
+	text-align: center
+}
+fieldset{
+	padding-bottom: 30px;
+}
+#pasos,#paso1,#paso2,#paso3,#paso4,#pasofinal{
+	display:none;
+}
+.pull-center{
+	margin: auto;
+	display:block;
+}
+.profesor>.alert{
+	margin: 10px;
+}
+.profesor>.alert:hover{
+	margin: 10px;
+	cursor:pointer;
+	box-shadow: 5px 5px 5px #888888;
+
+}
+</style>
+
+<section class="container">
+	<br><br>
+<h4>Portal de consulta de alumnos</h4>
+<hr class="red">
+<fieldset id="paso0">
+	<div class="alert alert-info">
+		<h4>¡Bienvenido!</h4>
+		<p>El acceso a este portal le brindará las herramientas para darle seguimiento al estado de salud de su hijo, así como consejos para proporcionarle un mejor cuidado
+		</p>
+		<button id="validar0" style="margin-top: 10px" class="btn btn-info pull-center">Iniciar proceso</button>
+	</div>
+</fieldset>
+<ul id="pasos" class="wizard-steps">
+      <li class="completed">
+          <h5>Paso 1</h5>
+          <span>Curp</span>
+      </li>
+      <li >
+          <h5>Paso 2</h5>
+          <span>Escuela</span>
+      </li>
+      <li >
+          <h5>Paso 3</h5>
+          <span>Docente</span>
+      </li>
+      <li >
+          <h5>Paso 4</h5>
+          <span>Boleta de calificaciones</span>
+      </li>
+      <li >
+          <i class="glyphicon glyphicon-ok-circle"></i>
+      </li>
+  </ul>
+<fieldset id="paso1">
+	<legend>
+		<b>Paso 1 </b>
+		<Small> Ingresa la curp del alumno:</Small>
+	</legend>
+	<br>
+	<div class="container row">
+		<div class="input-group">
+			<span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+			<input type="text" class="form-control" placeholder="Ingresa la curp" aria-describedby="basic-addon1">
+		</div>
+		<br>
+		<button id="validar1" class="btn btn-info pull-right">Validar</button>
+	</div>
+	<br>
+	<br>
+
+</fieldset>
+
+<fieldset  id="paso2">
+	<legend>
+		<b>Paso 2 </b>
+		<small> Ingresa el nombre de la escuela: </small>
+	</legend>
+	<br>
+	<div class="container row">
+		<div class="col-md-12">
+			<label>Nombre de la escuela</label>
+			<input type="text" class="form-control" placeholder="ingresa el nombre" aria-describedby="basic-addon1">
+		</div>
+
+	</div>
+	<br>
+	<button id="validar2" class="btn btn-info pull-right">Validar</button>
+	<br>
+</fieldset>
+<fieldset id="paso3">
+	<legend>
+		<b>Paso 3 </b>
+		<small> Selecciona cuál es el maestro de tu hijo: </small>
+	</legend>
+	<br>
+	<div class="container row">
+		<div class=" profesor col-md-3 ">
+			<div class="alert alert-warning">
+				<i class="fa fa-user fa-2x"></i>
+				<br>
+					Lissete Ojeda Rodriguez
+					</div>
+			</div>
+		<div class=" profesor col-md-3 ">
+			<div class="alert alert-warning">
+				<i class="fa fa-user fa-2x"></i>
+				<br>
+				Raul Hernandez Gomez
+					</div>
+			</div>
+			<div class=" profesor col-md-3 ">
+				<div class="alert alert-warning">
+					<i class="fa fa-user fa-2x"></i>
+					<br>
+					Casiano Morales Lopez
+						</div>
+				</div>
+				<div class=" profesor col-md-3 ">
+					<div class="alert alert-warning">
+						<i class="fa fa-user fa-2x"></i>
+						<br>
+						Jaime Jaramillo jara
+							</div>
+					</div>
+
+	</div>
+	<br>
+	<br>
+</fieldset>
+<fieldset id="paso4">
+	<legend><b>Paso 4</b>
+	<small> Ingresa las calificaciones del último periodo: </small>
+	</legend>
+	<br>
+	<div class="container row">
+		<button id="validar4" class="btn btn-success pull-right">Validar y terminar</button>
+
+	<table id="tabla_calificaciones" class="table">
+	<thead>
+		<tr>
+			<th>
+				Materia
+			</th>
+			<th>
+				1er Bimestre
+			</th>
+			<th>
+				2do Bimestre
+			</th>
+			<th>
+				3er Bimestre
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+				<tr>
+					<td>Español</td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Matemáticas</td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Ciencias Sociales</td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Historia</td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Educación física</td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+					<td><input type="number" class="form-control"></td>
+				</tr>
+		</tbody>
+	</table>
+	<br>
+	</div>
+
+
+</fieldset>
+<fieldset id="pasofinal">
+	<div class="alert alert-success">
+		<i class="fa fa-check fa-3x"></i>
+		<h4> Registro Correcto</h4>
+		<p>Tu usuario y contraseña será enviado a tu correo proximamente...</p>
+	</div>
+</fieldset>
+
+</section>
+
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+	var calificaciones = [[0,0,9,0],[0,8,0,0],[0,0,0,10],[0,0,8,0],[0,9,0,0]]
+		$(function(){
+			$('#validar0').click(function(){
+				$('#paso0').hide('fast');
+				$('#pasos').show('fast');
+				$('#paso1').show('slow');
+
+			})
+		$('#validar1').click(function(){
+			$('#paso1').hide('fast');
+			$('#paso2').show('slow');
+			$('#pasos>li:nth-child(2)').addClass('completed');
+
+		})
+		$('#validar2').click(function(){
+			$('#paso2').hide('fast');
+			$('#paso3').show('slow');
+			$('#pasos>li:nth-child(3)').addClass('completed');
+
+		})
+		$('.profesor>.alert').click(function(){
+
+			$('#paso3').hide('fast');
+			$('#pasos>li:nth-child(4)').addClass('completed');
+
+			$('#paso4').show('slow');
+		})
+		$('#validar4').click(function(){
+			$('#paso4').hide('fast');
+			$('#pasofinal').show('slow');
+			$('#pasos>li:nth-child(5)').addClass('success');
+
+		})
+		var i,j;
+		$('#tabla_calificaciones tbody tr').each(function(i){
+			console.log(i)
+			$(this).find('td').each(function(j){
+				if(calificaciones[i][j] != 0)
+					$(this).find('input').val(calificaciones[i][j])
+			});
+
+		})
+
+
+	})
+
+
+	</script>
+	<script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+	<script src="js/funciones.js"></script>
+
+
+
+</body>
+</html>
